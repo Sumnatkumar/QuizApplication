@@ -1,0 +1,41 @@
+┌─────────────────────────────────────────────────────────────────┐
+│                         QUIZ APPLICATION                        │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  ┌──────────────────┐     ┌──────────────────┐                  │
+│  │   Question       │     │   QuizService    │                  │
+│  ├──────────────────┤     ├──────────────────┤                  │
+│  │ - id: int        │     │ - questions:     │                  │
+│  │ - text: String   │     │   List<Question> │                  │
+│  │ - options:       │     │ - currentIndex:  │                  │
+│  │   String[]       │     │   int            │                  │
+│  │ - correctAnswer: │     │ - score: int     │                  │
+│  │   int            │     │ - totalQuestions:│                  │
+│  ├──────────────────┤     │   int            │                  │
+│  │ + getters/setters│     ├──────────────────┤                  │
+│  │ + isCorrect()    │     │ + startQuiz()    │                  │
+│  │ + display()      │     │ + displayQues()  │                  │
+│  └────────┬─────────┘     │ + checkAnswer()  │                  │
+│           │               │ + showResult()   │                  │
+│           │               │ + getQuestions() │                  │
+│           │               └────────┬─────────┘                  │
+│           │                        │                            │
+│           │                        │                            │
+│           └────────────┬───────────┘                            │
+│                        │                                        │
+│              ┌─────────▼─────────┐                              │
+│              │  QuizApplication  │                              │
+│              │  (Main Class)     │                              │
+│              ├───────────────────┤                              │
+│              │ + main(String[])  │                              │
+│              └───────────────────┘                              │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+
+                ┌─────────────────────────┐
+                │    Exception Handling    │
+                ├─────────────────────────┤
+                │ • InvalidOptionException │
+                │ • QuizDataException      │
+                │ • InputMismatchException │
+                └─────────────────────────┘
